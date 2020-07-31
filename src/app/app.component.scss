@@ -94,6 +94,9 @@ header{
         img{
             width:100%;
             min-height:200px;
+            @include responsive(_phone){
+                margin-bottom:20px;
+            }
         }
     }
     .shape_content{
@@ -102,11 +105,19 @@ header{
             line-height: normal;
             padding-top: 20px;
             margin-bottom: 35px;
+            @include responsive(_phone){
+                text-align: center;
+                padding-top: 20px;
+                margin-bottom: 30px;
+            }
         }
         h3{
             color:$sectionHeading;
             font-size: 28px;
             text-transform: capitalize;
+            @include responsive(_phone){
+                text-align: center;
+            }
         }
         p{
             font-size:16px;
@@ -133,6 +144,9 @@ header{
 .reason_section{
     text-align: center;
     margin-top:80px;
+    @include responsive(_phone){
+        margin-top:50px;
+    }
     h1{
         font-size: 40px;
         line-height: normal;
@@ -148,11 +162,15 @@ header{
         width:100%;
         padding-bottom:70px;
         .card{
-            display:flex;
             align-items: center;
             padding:30px;
             background:#e2e2e27a;
             border:1px solid #e2e2e27a;
+            @include responsive(_phone){
+                margin:0px;
+                width:100%;
+                margin-bottom: 20px;
+            }
             img{
                 width:70px;
                 height:70px;
@@ -181,6 +199,10 @@ header{
     margin-top:20px;
     margin-bottom:70px;
     text-align: center;
+    @include responsive(_phone){
+        padding-top: 0px;
+        margin-bottom: 30px;
+    }
     h1{
         font-size: 40px;
         line-height: normal;
@@ -222,6 +244,9 @@ header{
             .menu_card{
                 padding:20px;
                 box-shadow: 2px 2px 20px #3c38387a;
+                @include responsive(_phone){
+                    margin: 15px 0px;
+                }
                 img{
                     width:100%;
                     height:auto;
@@ -271,6 +296,9 @@ header{
 // history section
 .history_section{
     .history_content{
+        @include responsive(_phone){
+            text-align: center;
+        }
         h1{
             font-size: 40px;
             line-height: normal;
@@ -298,6 +326,9 @@ header{
                 font-size:13px;
             }
             margin-top:30px;
+            @include responsive(_phone){
+                margin-bottom: 15px;
+            }
         }
     }
     .history_img{
@@ -346,6 +377,9 @@ header{
     }
     .news_card{
         text-align: left;
+        @include responsive(_phone){
+            margin-bottom: 30px;
+        }
         .card_img{
             img{
                 width:100%;
@@ -389,21 +423,29 @@ header{
         background:#fff;
         border-radius: 25px;
         box-shadow: 0px 0px 20px #cccaca;
+        position: relative;
+        min-height: 50px;
         form{
             input{
                 border:none;
                 outline:none;
                 padding:15px;
-                margin-left:1%;
+                // margin-left:1%;
                 border-radius: 25px;
+                position: absolute;
+                left:5px;
+                top:0;
             }
             button{
                 border:none;
                 outline:none;
                 padding:15px;
                 border-radius:50%;
-                margin-left:28%;
+                // margin-left:28%;
                 background:$buttonColor;
+                position: absolute;
+                right:5px;
+                top:0;
             }
         }
     }
