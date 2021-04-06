@@ -1,489 +1,317 @@
-@import '../mediaQuery.scss';
+@import "../mediaQuery.scss";
 
-$buttonColor:#8CB560;
-$buttonBorderColor:#707070;
+$buttonColor: #8cb560;
+$buttonBorderColor: #707070;
 $buttonBorderShadow: 0px 3px #0c0c0c1c;
 
-$sectionHeading: #FEBD00;
+$sectionHeading: #febd00;
 
-// header section 
-header{
+// header section
+header {
+  display: flex;
+  min-height: 60px;
+  width: 100%;
+  padding: 30px 0px;
+  align-items: center;
+  .logo {
+    img {
+    }
+  }
+  nav {
     display: flex;
-    min-height:60px;
-    width:100%;
-    padding: 30px 0px;
-    align-items: center;
-    .logo{
-        img{}
-    }
-    nav{
-        display:flex;
-        flex:1;
-        flex-direction: row-reverse;
-        padding-top:15px;
-        ul{
-            li{
-                display:inline-block;
-                a{
-                    padding:10px 20px;
-                    @include responsive(_phone){
-                        padding:10px 5px;
-                    }
-                }
+    flex: 1;
+    flex-direction: row-reverse;
+    padding-top: 15px;
+    ul {
+      li {
+        display: inline-block;
+        a {
+          padding: 10px 20px;
+          i {
+            font-size: 20px;
+            color: #1d365fd9;
+            position: relative;
+            span {
+              font-size: 10px;
+              position: absolute;
+              top: -13px;
+              right: -15px;
+              border-radius: 50%;
             }
+          }
+          @include responsive(_phone) {
+            padding: 10px 5px;
+          }
         }
+      }
     }
+  }
 }
 
-// heder post section 
-.header_post{
-        
-    .header_post_content{
-        padding-top:40px;
-        h1{
-            font-size: 4em;
-            line-height: normal;
-            @include responsive(_phone){
-                font-size: 3em;
-            }
-        }
-        p{
-            font-size:19px;
-            margin-top:40px;
-        }
-        .get_started{
-            width:100%;
-            margin-top:60px;
-            .get_started_email{
-                width:65%;
-                margin-right:5%;
-                padding:4%;
-                border-radius:5px;
-                border:1px solid #fff;
-                box-shadow:$buttonBorderShadow;
-                color:#B7B7B7
-            }
-            .get_started_button{
-                width:30%;
-                padding:4%;
-                border-radius:5px;
-                background:$buttonColor;
-                border:$buttonBorderColor;
-                box-shadow: $buttonBorderShadow;
-                color:#fff;
-                font-weight: bold;
-                @include responsive(_phone){
-                    font-size:13px;
-                }
-
-            }
-        }
+// heder post section
+.header_post {
+  .header_post_content {
+    padding-top: 40px;
+    h1 {
+      font-size: 4em;
+      line-height: normal;
+      @include responsive(_phone) {
+        font-size: 3em;
+      }
     }
-    .header_post_image{
-        img{
-            width: 100% ;
-            height:auto;
-        }
+    p {
+      font-size: 19px;
+      margin-top: 40px;
     }
+    .get_started {
+      width: 100%;
+      margin-top: 60px;
+      .get_started_email {
+        width: 65%;
+        margin-right: 5%;
+        padding: 4%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        box-shadow: $buttonBorderShadow;
+        color: #b7b7b7;
+      }
+      .get_started_button {
+        width: 30%;
+        padding: 4%;
+        border-radius: 5px;
+        background: $buttonColor;
+        border: $buttonBorderColor;
+        box-shadow: $buttonBorderShadow;
+        color: #fff;
+        font-weight: bold;
+        @include responsive(_phone) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .header_post_image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 //welcome section
-.welcome_section{
-    margin-top:40px;
-    .shape_img{
-        img{
-            width:100%;
-            min-height:200px;
-            @include responsive(_phone){
-                margin-bottom:20px;
-            }
-        }
+.welcome_section {
+  margin-top: 40px;
+  .shape_img {
+    img {
+      width: 100%;
+      min-height: 200px;
+      @include responsive(_phone) {
+        margin-bottom: 20px;
+      }
     }
-    .shape_content{
-        h1{
-            font-size: 40px;
-            line-height: normal;
-            padding-top: 20px;
-            margin-bottom: 35px;
-            @include responsive(_phone){
-                text-align: center;
-                padding-top: 20px;
-                margin-bottom: 30px;
-            }
-        }
-        h3{
-            color:$sectionHeading;
-            font-size: 28px;
-            text-transform: capitalize;
-            @include responsive(_phone){
-                text-align: center;
-            }
-        }
-        p{
-            font-size:16px;
-            line-height: normal;
-        }
-        button{
-            border-radius:5px;
-            background:$buttonColor;
-            border:$buttonBorderColor;
-            box-shadow: $buttonBorderShadow;
-            color:#fff;
-            padding:4%;
-            font-weight: bold;
-            @include responsive(_phone){
-                font-size:13px;
-            }
-            margin-top:30px;
-        }
-        
-    }
-}
-
-// reason section
-.reason_section{
-    text-align: center;
-    margin-top:80px;
-    @include responsive(_phone){
-        margin-top:50px;
-    }
-    h1{
-        font-size: 40px;
-        line-height: normal;
+  }
+  .shape_content {
+    h1 {
+      font-size: 40px;
+      line-height: normal;
+      padding-top: 20px;
+      margin-bottom: 35px;
+      @include responsive(_phone) {
+        text-align: center;
         padding-top: 20px;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
+      }
     }
-    h3{
-        color:$sectionHeading;
-        font-size: 28px;
-        text-transform: capitalize;
+    h3 {
+      color: $sectionHeading;
+      font-size: 28px;
+      text-transform: capitalize;
+      @include responsive(_phone) {
+        text-align: center;
+      }
     }
-    .reason_card{
-        width:100%;
-        padding-bottom:70px;
-        .card{
-            align-items: center;
-            padding:30px;
-            background:#e2e2e27a;
-            border:1px solid #e2e2e27a;
-            @include responsive(_phone){
-                margin:0px;
-                width:100%;
-                margin-bottom: 20px;
-            }
-            img{
-                width:70px;
-                height:70px;
-                margin-bottom:20px;
-            }
-            h3{
-                color:black;
-                font-size:20px;
-                margin-bottom:15px;
-            }
-            p{
-                font-size:18px;
-                text-align: center;
-                line-height: normal;
-            }
-            &:hover{
-                background:#fff;
-                border-bottom:5px solid $buttonColor;
-            }
-        }
+    p {
+      font-size: 16px;
+      line-height: normal;
     }
+    button {
+      border-radius: 5px;
+      background: $buttonColor;
+      border: $buttonBorderColor;
+      box-shadow: $buttonBorderShadow;
+      color: #fff;
+      padding: 4%;
+      font-weight: bold;
+      @include responsive(_phone) {
+        font-size: 13px;
+      }
+      margin-top: 30px;
+    }
+  }
 }
 
 // browse section
-.browse_section{
-    margin-top:20px;
-    margin-bottom:70px;
-    text-align: center;
-    @include responsive(_phone){
-        padding-top: 0px;
-        margin-bottom: 30px;
-    }
-    h1{
-        font-size: 40px;
-        line-height: normal;
-        padding-top: 20px;
-        margin-bottom: 35px;
-    }
-    h3{
-        color:$sectionHeading;
-        font-size: 28px;
-        text-transform: capitalize;
-    }
-    .menu_content{
-        .list{
-            width:100%;
-            background:#e2e2e27a;
-            ul{
-                text-align: left;
-                li{
-                    a{
-                        display:block;
-                        color:#afadad;
-                        padding:20px 30px;
+.browse_section {
+  margin-top: 20px;
+  margin-bottom: 70px;
+  text-align: center;
+  @include responsive(_phone) {
+    padding-top: 0px;
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 40px;
+    line-height: normal;
+    padding-top: 20px;
+    margin-bottom: 35px;
+  }
+  h3 {
+    color: $sectionHeading;
+    font-size: 28px;
+    text-transform: capitalize;
+  }
+  .menu_content {
+    .list {
+      width: 100%;
+      background: #e2e2e27a;
+      ul {
+        text-align: left;
+        li {
+          a {
+            display: block;
+            color: #afadad;
+            padding: 20px 30px;
 
-                        &:hover{
-                            color:$sectionHeading;
-                            border-left: 3px solid $sectionHeading;
-                            text-decoration: none;
-                        }
-                        &:active{
-                            color:$sectionHeading;
-                            border-left: 3px solid $sectionHeading;
-                            text-decoration: none;
-                        }
-                    }
-                }
+            &:hover {
+              color: $sectionHeading;
+              border-left: 3px solid $sectionHeading;
+              text-decoration: none;
             }
-        }
-        .all_menu{
-            .menu_card{
-                padding:20px;
-                box-shadow: 2px 2px 20px #3c38387a;
-                @include responsive(_phone){
-                    margin: 15px 0px;
-                }
-                img{
-                    width:100%;
-                    height:auto;
-                    margin-bottom:12px;
-                }
-                h4{
-                    font-size:20px;
-                    color:black;
-                    margin-bottom:10px;
-                }
-                .ratting{
-                    display: flex;
-                    justify-content: center;
-                    input{
-                        display:none;
-                    }
-                    label{
-                        display:block;
-                        cursor:pointer;
-                        width:30px;
-                        &::before{
-                            content:"\2605";
-                            font-size:25px;
-                            display:inline-block;
-                            // color:#ddd;
-                            color:yellow;
-                        }
-                        // &::after{
-                        //     content:"\2605";
-                        //     font-size:25px;
-                        //     position:relative;
-                        //     display:inline-block;
-                        //     color:yellow;
-                        // }
-                    }
-                }
-                p{
-                    color:black;
-                    font-size:16px;
-                    margin-top:10px;
-                }
+            &:active {
+              color: $sectionHeading;
+              border-left: 3px solid $sectionHeading;
+              text-decoration: none;
             }
+          }
         }
+      }
     }
+    .all_menu {
+      .menu_card {
+        padding: 20px;
+        box-shadow: 2px 2px 20px #3c38387a;
+        @include responsive(_phone) {
+          margin: 15px 0px;
+        }
+        img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 12px;
+        }
+        h4 {
+          font-size: 20px;
+          color: black;
+          margin-bottom: 10px;
+        }
+        .ratting {
+          display: flex;
+          justify-content: center;
+          input {
+            display: none;
+          }
+          label {
+            display: block;
+            cursor: pointer;
+            width: 30px;
+            &::before {
+              content: "\2605";
+              font-size: 25px;
+              display: inline-block;
+              // color:#ddd;
+              color: yellow;
+            }
+            // &::after{
+            //     content:"\2605";
+            //     font-size:25px;
+            //     position:relative;
+            //     display:inline-block;
+            //     color:yellow;
+            // }
+          }
+        }
+        p {
+          color: black;
+          font-size: 16px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
 }
 
 // history section
-.history_section{
-    .history_content{
-        @include responsive(_phone){
-            text-align: center;
-        }
-        h1{
-            font-size: 40px;
-            line-height: normal;
-            padding-top: 20px;
-            margin-bottom: 35px;
-        }
-        h3{
-            color:$sectionHeading;
-            font-size: 28px;
-            text-transform: capitalize;
-        }
-        p{
-            font-size:16px;
-            line-height: normal;
-        }
-        button{
-            border-radius:5px;
-            background:$buttonColor;
-            border:$buttonBorderColor;
-            box-shadow: $buttonBorderShadow;
-            color:#fff;
-            padding:4%;
-            font-weight: bold;
-            @include responsive(_phone){
-                font-size:13px;
-            }
-            margin-top:30px;
-            @include responsive(_phone){
-                margin-bottom: 15px;
-            }
-        }
+.history_section {
+  .history_content {
+    @include responsive(_phone) {
+      text-align: center;
     }
-    .history_img{
-        img{
-            width:100%;
-        }
+    h1 {
+      font-size: 40px;
+      line-height: normal;
+      padding-top: 20px;
+      margin-bottom: 35px;
     }
+    h3 {
+      color: $sectionHeading;
+      font-size: 28px;
+      text-transform: capitalize;
+    }
+    p {
+      font-size: 16px;
+      line-height: normal;
+    }
+    button {
+      border-radius: 5px;
+      background: $buttonColor;
+      border: $buttonBorderColor;
+      box-shadow: $buttonBorderShadow;
+      color: #fff;
+      padding: 4%;
+      font-weight: bold;
+      @include responsive(_phone) {
+        font-size: 13px;
+      }
+      margin-top: 30px;
+      @include responsive(_phone) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .history_img {
+    img {
+      width: 100%;
+    }
+  }
 }
 
 //testimonials
-.testmonial_section{
-    margin:50px 0px;
-    text-align: center;
-    h1{
-        font-size: 40px;
-        line-height: normal;
-        padding-top: 20px;
-        margin-bottom: 35px;
+.testmonial_section {
+  margin: 50px 0px;
+  text-align: center;
+  h1 {
+    font-size: 40px;
+    line-height: normal;
+    padding-top: 20px;
+    margin-bottom: 35px;
+  }
+  h3 {
+    color: $sectionHeading;
+    font-size: 28px;
+    text-transform: capitalize;
+  }
+  .feedback_img {
+    img {
+      width: 100%;
     }
-    h3{
-        color:$sectionHeading;
-        font-size: 28px;
-        text-transform: capitalize;
-    }
-    .feedback_img{
-        img{
-            width:100%;
-        }
-    }
-}
-
-//news 
-.news_sectoion{
-    margin:50px 0px;
-    text-align: center;
-    h1{
-        font-size: 40px;
-        line-height: normal;
-        padding-top: 20px;
-        margin-bottom: 35px;
-    }
-    h3{
-        color:$sectionHeading;
-        font-size: 28px;
-        text-transform: capitalize;
-    }
-    .news_card{
-        text-align: left;
-        @include responsive(_phone){
-            margin-bottom: 30px;
-        }
-        .card_img{
-            img{
-                width:100%;
-                border-radius:8px;
-            }
-        }
-        h3{
-            font-size:20px;
-            color:black;
-            margin-top:15px;
-        }
-        p{
-            font-size:16px;
-            color:black;
-            margin: 15px 0px;
-        }
-        a{
-            font-size:14px;
-            color: $sectionHeading;
-        }
-    }
-
-}
-
-//subscription
-.subscription_section{
-    margin:50px 0px;
-    text-align: center;
-    h1{
-        font-size: 40px;
-        line-height: normal;
-        padding-top: 20px;
-        margin-bottom: 35px;
-    }
-    h3{
-        color:$sectionHeading;
-        font-size: 28px;
-        text-transform: capitalize;
-    }
-    .sub_form{
-        background:#fff;
-        border-radius: 25px;
-        box-shadow: 0px 0px 20px #cccaca;
-        position: relative;
-        min-height: 50px;
-        form{
-            input{
-                border:none;
-                outline:none;
-                padding:15px;
-                // margin-left:1%;
-                border-radius: 25px;
-                position: absolute;
-                left:5px;
-                top:0;
-            }
-            button{
-                border:none;
-                outline:none;
-                padding:15px;
-                border-radius:50%;
-                // margin-left:28%;
-                background:$buttonColor;
-                position: absolute;
-                right:5px;
-                top:0;
-            }
-        }
-    }
-}
-
-.footer_bg{
-    background:rgba(236, 236, 236, 0.856);
-    padding: 50px 0px;
-    .intro_footer{
-        img{
-            display:block;
-            margin-bottom:10px;
-        }
-        p{
-            color:rgb(151, 151, 151);
-            line-height: 2em;
-        }
-        ul{
-            li{
-                display:inline;
-                a{
-                    width:40px;
-                    height:40px;
-                    background:rgb(55, 131, 59);
-                }
-            }
-        }
-    }
-    .footer_links{
-        h4{}
-        ul{
-            li{
-                margin:10px 0px;
-                color:rgb(151, 151, 151);
-                a{
-                    color:rgb(151, 151, 151);
-                }
-            }
-        }
-    }
+  }
 }

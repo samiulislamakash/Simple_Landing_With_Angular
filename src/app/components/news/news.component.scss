@@ -1,0 +1,44 @@
+@import "../../app.component.scss";
+
+//news
+.news_sectoion {
+  margin: 50px 0px;
+  text-align: center;
+  h1 {
+    font-size: 40px;
+    line-height: normal;
+    padding-top: 20px;
+    margin-bottom: 35px;
+  }
+  h3 {
+    color: $sectionHeading;
+    font-size: 28px;
+    text-transform: capitalize;
+  }
+  .news_card {
+    text-align: left;
+    @include responsive(_phone) {
+      margin-bottom: 30px;
+    }
+    .card_img {
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
+    h3 {
+      font-size: 20px;
+      color: black;
+      margin-top: 15px;
+    }
+    p {
+      font-size: 16px;
+      color: black;
+      margin: 15px 0px;
+    }
+    a {
+      font-size: 14px;
+      color: $sectionHeading;
+    }
+  }
+}
