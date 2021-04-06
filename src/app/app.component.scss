@@ -170,6 +170,12 @@ header {
     font-size: 28px;
     text-transform: capitalize;
   }
+
+  .showBtn {
+    background-color: $buttonColor;
+    color: #fff;
+    padding: 4px 20px;
+  }
   .menu_content {
     .list {
       width: 100%;
@@ -245,73 +251,6 @@ header {
           margin-top: 10px;
         }
       }
-    }
-  }
-}
-
-// history section
-.history_section {
-  .history_content {
-    @include responsive(_phone) {
-      text-align: center;
-    }
-    h1 {
-      font-size: 40px;
-      line-height: normal;
-      padding-top: 20px;
-      margin-bottom: 35px;
-    }
-    h3 {
-      color: $sectionHeading;
-      font-size: 28px;
-      text-transform: capitalize;
-    }
-    p {
-      font-size: 16px;
-      line-height: normal;
-    }
-    button {
-      border-radius: 5px;
-      background: $buttonColor;
-      border: $buttonBorderColor;
-      box-shadow: $buttonBorderShadow;
-      color: #fff;
-      padding: 4%;
-      font-weight: bold;
-      @include responsive(_phone) {
-        font-size: 13px;
-      }
-      margin-top: 30px;
-      @include responsive(_phone) {
-        margin-bottom: 15px;
-      }
-    }
-  }
-  .history_img {
-    img {
-      width: 100%;
-    }
-  }
-}
-
-//testimonials
-.testmonial_section {
-  margin: 50px 0px;
-  text-align: center;
-  h1 {
-    font-size: 40px;
-    line-height: normal;
-    padding-top: 20px;
-    margin-bottom: 35px;
-  }
-  h3 {
-    color: $sectionHeading;
-    font-size: 28px;
-    text-transform: capitalize;
-  }
-  .feedback_img {
-    img {
-      width: 100%;
     }
   }
 }

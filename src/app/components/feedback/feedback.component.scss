@@ -1,0 +1,23 @@
+@import "../../app.component.scss";
+
+//Feedbacks
+.feedbacks_section {
+  margin: 50px 0px;
+  text-align: center;
+  h1 {
+    font-size: 40px;
+    line-height: normal;
+    padding-top: 20px;
+    margin-bottom: 35px;
+  }
+  h3 {
+    color: $sectionHeading;
+    font-size: 28px;
+    text-transform: capitalize;
+  }
+  .feedback_img {
+    img {
+      width: 100%;
+    }
+  }
+}
